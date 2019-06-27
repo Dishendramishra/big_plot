@@ -16,8 +16,8 @@ with open("dishendra.txt","r") as f:
         except:
             pass
 
-# print points[:,0]     #
-# print points[:,1]     #
+# print points[:,0]     # x values
+# print points[:,1]     # y values
 
 plt.plot(points[:,0],points[:, 1])
 plt.show()
