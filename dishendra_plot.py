@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 import os
 import subprocess
 
-rows = int(subprocess.check_output(["wc","-l","dishendra.txt"]).decode("utf-8").split()[0])
+file_name = ""
+
+rows = int(subprocess.check_output(["wc","-l",file_name]).decode("utf-8").split()[0])
 cols = 2
 
 points = np.memmap('memmapped.dat', dtype=np.float32,
@@ -12,7 +14,7 @@ points = np.memmap('memmapped.dat', dtype=np.float32,
 values = None
 row = 0
 
-with open("dishendra.txt","r") as f:
+with open(file_name,"r") as f:
     while True:
         temp = f.readline()
         if(temp == ""):
